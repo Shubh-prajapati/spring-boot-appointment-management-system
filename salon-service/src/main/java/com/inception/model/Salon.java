@@ -1,9 +1,9 @@
 package com.inception.model;
 
+
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -32,9 +32,12 @@ public class Salon {
     private Long ownerId;
 
     @Column(nullable = false)
-    private LocalDateTime openTime;
+    private java.time.LocalTime openTime;
 
     @Column(nullable = false)
-    private LocalDateTime closeTime;
+    private java.time.LocalTime closeTime;
 
+
+    @Column(nullable = false)
+   private  String  email;
 }

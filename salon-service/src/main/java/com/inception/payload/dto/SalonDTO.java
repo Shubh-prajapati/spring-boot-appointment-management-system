@@ -1,14 +1,26 @@
 package com.inception.payload.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class SalonDTO {
 
 
     private Long id;
 
     private String name;
+
+    private  String email;
 
     private List<String> images;
 
@@ -20,7 +32,9 @@ public class SalonDTO {
 
     private Long ownerId;
 
-    private LocalDateTime openTime;
+    private UserDTO owner;
 
-    private LocalDateTime closeTime;
+    private LocalTime openTime;
+    private LocalTime closeTime;
+
 }
